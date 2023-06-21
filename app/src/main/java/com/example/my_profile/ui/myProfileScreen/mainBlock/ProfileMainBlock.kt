@@ -34,10 +34,10 @@ class ProfileMainBlock {
                     modifier = Modifier.padding(top = 8.dp, start = 8.dp)
                 )
 
-                Column(Modifier.padding(8.dp)) {
-                    Text("Ларионов Георгий Юрьевич" , style = TextStyle(fontSize = 16.sp , fontWeight = FontWeight.Bold))
+                Column(Modifier.padding(8.dp).fillMaxWidth()) {
+                    Text("Ларионов Георгий Юрьевич" , style = TextStyle(fontSize = 24.sp , fontWeight = FontWeight.Bold))
                     Spacer(Modifier.padding(4.dp))
-                    Text("Андроид разработчик")
+                    Text("Андроид разработчик" , style = TextStyle(fontSize = 12.sp))
                     Spacer(Modifier.padding(4.dp))
                     Row(modifier = Modifier.padding(start = 8.dp)) {
                         Image(
