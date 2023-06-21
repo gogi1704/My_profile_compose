@@ -2,8 +2,8 @@ package com.example.my_profile.ui.myProfileScreen
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
-import com.example.my_profile.MainListData
-import com.example.my_profile.ui.myProfileScreen.list.MyList
+import com.example.my_profile.data.MainListData
+import com.example.my_profile.ui.myProfileScreen.profileList.MainProfileList
 import com.example.my_profile.ui.myProfileScreen.mainBlock.ProfileMainBlock
 
 class MyProfileScreen {
@@ -13,7 +13,7 @@ class MyProfileScreen {
 
         Column {
            ProfileMainBlock().MainBlock()
-            MyList().MainList( listOf(
+            MainProfileList().MainList( listOf(
                 MainListData("Контакты"),
                 MainListData("Навыки"),
                 MainListData("Опыт работы"),
