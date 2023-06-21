@@ -4,4 +4,4 @@ data class ExperienceModel(
     val title:String,
     val content:String,
     val link:String
-): MainList()
+)

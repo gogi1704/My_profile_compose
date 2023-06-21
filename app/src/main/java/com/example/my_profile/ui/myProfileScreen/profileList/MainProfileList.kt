@@ -16,15 +16,13 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.my_profile.R
 import com.example.my_profile.data.models.ContactModel
+import com.example.my_profile.data.models.ListType
 import com.example.my_profile.data.models.MainListModel
 import com.example.my_profile.ui.myProfileScreen.contactList.Contacts
 
@@ -62,33 +60,12 @@ class MainProfileList {
                 )
             }
             if (isClickedState.value) {
-                Contacts().ContactList(
-                    listOf(
-                        ContactModel(
-                            "+7-954-54-54",
-                            ImageVector.vectorResource(R.drawable.icon_phone)
-                        ), ContactModel(
-                            "+7-954-54-54",
-                            ImageVector.vectorResource(R.drawable.icon_phone)
-                        ), ContactModel(
-                            "+7-954-54-54",
-                            ImageVector.vectorResource(R.drawable.icon_phone)
-                        ), ContactModel(
-                            "+7-954-54-54",
-                            ImageVector.vectorResource(R.drawable.icon_phone)
-                        ), ContactModel(
-                            "+7-954-54-54",
-                            ImageVector.vectorResource(R.drawable.icon_phone)
-                        ), ContactModel(
-                            "+7-954-54-54",
-                            ImageVector.vectorResource(R.drawable.icon_phone)
-                        ), ContactModel(
-                            "+7-954-54-54",
-                            ImageVector.vectorResource(R.drawable.icon_phone)
-                        ),
-                        ContactModel("+7-954-54-54", ImageVector.vectorResource(R.drawable.icon_phone))
-                    )
-                )
+               when(item.type){
+                   is ListType.CONTACT -> Contacts().ContactList(item.list as List<ContactModel>)
+                   is ListType.QUALITY -> TODO()
+                   is ListType.SKILL -> TODO()
+               }
+
             }
 
 

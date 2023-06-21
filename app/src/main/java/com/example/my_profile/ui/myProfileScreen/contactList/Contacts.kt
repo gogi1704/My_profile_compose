@@ -19,7 +19,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.my_profile.R
@@ -48,7 +47,7 @@ class Contacts {
             shape = Shapes().small
         ) {
             Row {
-                Image(imageVector = contact.icon, contentDescription = null)
+                Image(imageVector =ImageVector.vectorResource(contact.iconId), contentDescription = null)
                 Spacer(modifier = Modifier.size(8.dp))
                 Text(contact.title, style = TextStyle(fontSize = 24.sp))
                 Column(
@@ -71,19 +70,7 @@ class Contacts {
 
     }
 
-    @Composable
-    @Preview
-    fun Prev() {
-        ContactList(
-            listOf(
-                ContactModel(
-                    "+7-954-54-54",
-                    ImageVector.vectorResource(R.drawable.icon_phone)
-                ),
-                ContactModel("+7-954-54-54", ImageVector.vectorResource(R.drawable.icon_phone))
-            )
-        )
-    }
+
 
 
 }
