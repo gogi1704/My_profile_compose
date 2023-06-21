@@ -23,13 +23,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.my_profile.R
-import com.example.my_profile.data.Contact
+import com.example.my_profile.data.models.ContactModel
 
 class Contacts {
 
     @OptIn(ExperimentalLayoutApi::class)
     @Composable
-    fun ContactList(list: List<Contact>) {
+    fun ContactList(list: List<ContactModel>) {
 
         FlowColumn {
             list.forEach {
@@ -40,7 +40,7 @@ class Contacts {
     }
 
     @Composable
-    fun ContactItem(contact: Contact) {
+    fun ContactItem(contact: ContactModel) {
 
         Surface(
             modifier = Modifier.fillMaxWidth()
@@ -76,11 +76,11 @@ class Contacts {
     fun Prev() {
         ContactList(
             listOf(
-                Contact(
+                ContactModel(
                     "+7-954-54-54",
                     ImageVector.vectorResource(R.drawable.icon_phone)
                 ),
-                Contact("+7-954-54-54", ImageVector.vectorResource(R.drawable.icon_phone))
+                ContactModel("+7-954-54-54", ImageVector.vectorResource(R.drawable.icon_phone))
             )
         )
     }

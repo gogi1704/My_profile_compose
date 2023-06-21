@@ -24,14 +24,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.my_profile.R
-import com.example.my_profile.data.Contact
-import com.example.my_profile.data.MainListData
+import com.example.my_profile.data.models.ContactModel
+import com.example.my_profile.data.models.MainListModel
 import com.example.my_profile.ui.myProfileScreen.contactList.Contacts
 
 class MainProfileList {
 
     @Composable
-    fun MainList(list: List<MainListData>) {
+    fun MainList(list: List<MainListModel>) {
 
         LazyColumn(modifier = Modifier.fillMaxSize()) {
             items(list) { item ->
@@ -43,7 +43,7 @@ class MainProfileList {
 
 
     @Composable
-    fun MainListItem(item: MainListData) {
+    fun MainListItem(item: MainListModel) {
         val isClickedState = remember {
             mutableStateOf(false)
         }
@@ -64,29 +64,29 @@ class MainProfileList {
             if (isClickedState.value) {
                 Contacts().ContactList(
                     listOf(
-                        Contact(
+                        ContactModel(
                             "+7-954-54-54",
                             ImageVector.vectorResource(R.drawable.icon_phone)
-                        ), Contact(
+                        ), ContactModel(
                             "+7-954-54-54",
                             ImageVector.vectorResource(R.drawable.icon_phone)
-                        ), Contact(
+                        ), ContactModel(
                             "+7-954-54-54",
                             ImageVector.vectorResource(R.drawable.icon_phone)
-                        ), Contact(
+                        ), ContactModel(
                             "+7-954-54-54",
                             ImageVector.vectorResource(R.drawable.icon_phone)
-                        ), Contact(
+                        ), ContactModel(
                             "+7-954-54-54",
                             ImageVector.vectorResource(R.drawable.icon_phone)
-                        ), Contact(
+                        ), ContactModel(
                             "+7-954-54-54",
                             ImageVector.vectorResource(R.drawable.icon_phone)
-                        ), Contact(
+                        ), ContactModel(
                             "+7-954-54-54",
                             ImageVector.vectorResource(R.drawable.icon_phone)
                         ),
-                        Contact("+7-954-54-54", ImageVector.vectorResource(R.drawable.icon_phone))
+                        ContactModel("+7-954-54-54", ImageVector.vectorResource(R.drawable.icon_phone))
                     )
                 )
             }
@@ -100,15 +100,15 @@ class MainProfileList {
     @Preview
     @Composable
     fun Preview() {
-        MainList(
-            listOf(
-                MainListData("qwd"),
-                MainListData("SFWEF"),
-                MainListData("qwZXCZd"),
-                MainListData("qwSDFSDFd"),
-                MainListData("qASDwd"),
-                MainListData("qEFSwd"),
-            )
-        )
+//        MainList(
+//            listOf(
+//                MainListModel("qwd"),
+//                MainListModel("SFWEF"),
+//                MainListModel("qwZXCZd"),
+//                MainListModel("qwSDFSDFd"),
+//                MainListModel("qASDwd"),
+//                MainListModel("qEFSwd"),
+//            )
+//        )
     }
 }
