@@ -6,6 +6,7 @@ import com.example.my_profile.R
 import com.example.my_profile.data.models.ContactModel
 import com.example.my_profile.data.models.ListType
 import com.example.my_profile.data.models.MainListModel
+import com.example.my_profile.data.models.QualityModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
@@ -23,7 +24,18 @@ class MyProfileViewModel @Inject constructor(application: Application) :
                 ContactModel("asdas", R.drawable.icon_phone)
             )
         ),
-        MainListModel("Навыки", ListType.CONTACT, listOf()),
+        MainListModel(
+            "Навыки",
+            ListType.QUALITY,
+            listOf(
+                QualityModel("Strong"),
+                QualityModel("Strong"),
+                QualityModel("Strong"),
+                QualityModel("Strong"),
+                QualityModel("Strong"),
+                QualityModel("Strong"),
+            )
+        ),
         MainListModel("Контакты", ListType.CONTACT, listOf()),
     )
 
