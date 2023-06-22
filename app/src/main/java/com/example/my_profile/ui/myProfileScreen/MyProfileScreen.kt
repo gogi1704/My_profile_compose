@@ -13,7 +13,7 @@ class MyProfileScreen {
 
         Column {
             ProfileMainBlock().MainBlock()
-            MainProfileList().MainList(viewModel.list)
+            MainProfileList().MainList(viewModel.data)
         }
 
     }

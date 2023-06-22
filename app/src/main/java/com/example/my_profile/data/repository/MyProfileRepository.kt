@@ -40,24 +40,31 @@ class MyProfileRepository {
 
     private fun getExperiences(): List<ExperienceModel> = listOf(
         ExperienceModel(
-            "New exp",
-            "efwef sdf sdfwef sdfwe4rt sdfw4 rtsdf4 wsdgf4e dg4 wdf4 sd ",
-            null
+            title = "Андроид Разработчик в супер компании))",
+            content = "efwef sdf sdfwef sdfwe4rt sdfw4 rtsdf4 wsdgf4e dg4 wdf4 sd ",
+            start = "2023",
+            link = "www.ru.com"
         ),
         ExperienceModel(
-            "New exp",
-            "efwef sdf sdfwef sdfwe4rt sdfw4 rtsdf4 wsdgf4e dg4 wdf4 sd ",
-            null
+            title = "New exp",
+            content = "efwef sdf sdfwef sdfwe4rt sdfw4 rtsdf4 wsdgf4e dg4 wdf4 sd ",
+            start = "2003",
+            finish = "1992",
+            link = "www.ru.com"
         ),
         ExperienceModel(
-            "New exp",
-            "efwef sdf sdfwef sdfwe4rt sdfw4 rtsdf4 wsdgf4e dg4 wdf4 sd ",
-            null
+            title = "New exp",
+            content = "efwef sdf sdfwef sdfwe4rt sdfw4 rtsdf4 wsdgf4e dg4 wdf4 sd ",
+            start = "",
+            finish = "",
+            link = "www.ru.com"
         ),
         ExperienceModel(
-            "New exp",
-            "efwef sdf sdfwef sdfwe4rt sdfw4 rtsdf4 wsdgf4e dg4 wdf4 sd ",
-            null
+            title = "New exp",
+            content = "efwef sdf sdfwef sdfwe4rt sdfw4 rtsdf4 wsdgf4e dg4 wdf4 sd ",
+            start = "2003",
+            finish = "1992",
+            link = "www.ru.com"
         )
     )
 

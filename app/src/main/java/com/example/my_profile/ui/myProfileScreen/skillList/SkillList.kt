@@ -1,4 +1,4 @@
-package com.example.my_profile.ui.myProfileScreen.qualityList
+package com.example.my_profile.ui.myProfileScreen.skillList
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.ExperimentalLayoutApi

@@ -22,11 +22,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.my_profile.data.models.ContactModel
+import com.example.my_profile.data.models.ExperienceModel
 import com.example.my_profile.data.models.ListType
 import com.example.my_profile.data.models.MainListModel
 import com.example.my_profile.data.models.SkillModel
 import com.example.my_profile.ui.myProfileScreen.contactList.Contacts
-import com.example.my_profile.ui.myProfileScreen.qualityList.SkillList
+import com.example.my_profile.ui.myProfileScreen.experienceList.ExperienceList
+import com.example.my_profile.ui.myProfileScreen.skillList.SkillList
 
 class MainProfileList {
 
@@ -64,11 +66,11 @@ class MainProfileList {
             if (isClickedState.value) {
                 when (item.type) {
                     ListType.CONTACT -> Contacts().ContactList(item.list as List<ContactModel>)
-                    ListType.QUALITY ->  TODO()
-                    ListType.SKILL ->SkillList().Skills(item.list as List<SkillModel>)
+                    ListType.QUALITY -> TODO()
+                    ListType.SKILL -> SkillList().Skills(item.list as List<SkillModel>)
                     ListType.ABOUT_ME -> TODO()
                     ListType.EDUCATION -> TODO()
-                    ListType.EXPERIENCE -> TODO()
+                    ListType.EXPERIENCE -> ExperienceList().Experiences(item.list as List<ExperienceModel>)
                     ListType.LANGUAGE -> TODO()
                 }
 
