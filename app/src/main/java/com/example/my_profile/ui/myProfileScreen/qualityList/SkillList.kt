@@ -19,17 +19,17 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.my_profile.R
-import com.example.my_profile.data.models.QualityModel
+import com.example.my_profile.data.models.SkillModel
 
-class QualityList {
+class SkillList {
 
     @OptIn(ExperimentalLayoutApi::class)
     @Composable
-    fun Qualities(list: List<QualityModel>) {
+    fun Skills(list: List<SkillModel>) {
 
         FlowRow(maxItemsInEachRow = 2) {
             for (item in list) {
-                QualitiesItem(item)
+                SkillItem(item)
             }
         }
 
@@ -37,7 +37,7 @@ class QualityList {
     }
 
     @Composable
-    fun QualitiesItem(item: QualityModel) {
+    fun SkillItem(item: SkillModel) {
 
         Surface(modifier = Modifier.fillMaxWidth(0.5F).padding(end = 4.dp , bottom = 4.dp) , shape = Shapes().small ) {
             Row(modifier = Modifier.padding(start = 12.dp, end = 12.dp)) {
@@ -46,7 +46,7 @@ class QualityList {
                     contentDescription = null,
                     modifier = Modifier.align(Alignment.CenterVertically)
                 )
-                Text(item.string, style = TextStyle(fontSize = 24.sp) , modifier = Modifier.padding(start = 8.dp))
+                Text(item.title, style = TextStyle(fontSize = 24.sp) , modifier = Modifier.padding(start = 8.dp))
             }
         }
 
@@ -56,14 +56,14 @@ class QualityList {
     @Composable
     @Preview
     fun Prev() {
-        Qualities(
+        Skills(
             listOf(
-                QualityModel("dwdwdwdwdw"),
-                QualityModel("dwdwdwdwdw"),
-                QualityModel("dwdwdwdwdw"),
-                QualityModel("dwdwdwdwdw"),
-                QualityModel("dwdwdwdwdw"),
-                QualityModel("dwdwdwdwdw")
+                SkillModel("dwdwdwdwdw"),
+                SkillModel("dwdwdwdwdw"),
+                SkillModel("dwdwdwdwdw"),
+                SkillModel("dwdwdwdwdw"),
+                SkillModel("dwdwdwdwdw"),
+                SkillModel("dwdwdwdwdw")
             )
         )
     }

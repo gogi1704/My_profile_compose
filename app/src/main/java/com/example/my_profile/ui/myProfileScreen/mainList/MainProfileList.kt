@@ -24,9 +24,9 @@ import androidx.compose.ui.unit.sp
 import com.example.my_profile.data.models.ContactModel
 import com.example.my_profile.data.models.ListType
 import com.example.my_profile.data.models.MainListModel
-import com.example.my_profile.data.models.QualityModel
+import com.example.my_profile.data.models.SkillModel
 import com.example.my_profile.ui.myProfileScreen.contactList.Contacts
-import com.example.my_profile.ui.myProfileScreen.qualityList.QualityList
+import com.example.my_profile.ui.myProfileScreen.qualityList.SkillList
 
 class MainProfileList {
 
@@ -64,8 +64,8 @@ class MainProfileList {
             if (isClickedState.value) {
                 when (item.type) {
                     ListType.CONTACT -> Contacts().ContactList(item.list as List<ContactModel>)
-                    ListType.QUALITY -> QualityList().Qualities(item.list as List<QualityModel>)
-                    ListType.SKILL -> TODO()
+                    ListType.QUALITY ->  TODO()
+                    ListType.SKILL ->SkillList().Skills(item.list as List<SkillModel>)
                     ListType.ABOUT_ME -> TODO()
                     ListType.EDUCATION -> TODO()
                     ListType.EXPERIENCE -> TODO()
