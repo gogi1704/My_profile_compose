@@ -77,9 +77,9 @@ class MyProfileRepository {
     )
 
     private fun getLanguages(): List<LanguageModel> = listOf(
-        LanguageModel("English", "1"),
-        LanguageModel("English", "1"),
-        LanguageModel("English", "1")
+        LanguageModel("English", "A1"),
+        LanguageModel("English", "B2"),
+        LanguageModel("English", "A2")
     )
 
     private fun getAboutMe(): List<AboutMeModel> = listOf(AboutMeModel("About me"))

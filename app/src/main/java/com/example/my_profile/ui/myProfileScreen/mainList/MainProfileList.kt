@@ -24,12 +24,14 @@ import androidx.compose.ui.unit.sp
 import com.example.my_profile.data.models.ContactModel
 import com.example.my_profile.data.models.EducationModel
 import com.example.my_profile.data.models.ExperienceModel
+import com.example.my_profile.data.models.LanguageModel
 import com.example.my_profile.data.models.ListType
 import com.example.my_profile.data.models.MainListModel
 import com.example.my_profile.data.models.SkillModel
 import com.example.my_profile.ui.myProfileScreen.contactList.Contacts
 import com.example.my_profile.ui.myProfileScreen.educationList.EducationList
 import com.example.my_profile.ui.myProfileScreen.experienceList.ExperienceList
+import com.example.my_profile.ui.myProfileScreen.languageList.LanguageList
 import com.example.my_profile.ui.myProfileScreen.skillList.SkillList
 
 class MainProfileList {
@@ -73,7 +75,7 @@ class MainProfileList {
                     ListType.ABOUT_ME -> TODO()
                     ListType.EDUCATION -> EducationList().Educations(item.list as List<EducationModel>)
                     ListType.EXPERIENCE -> ExperienceList().Experiences(item.list as List<ExperienceModel>)
-                    ListType.LANGUAGE -> TODO()
+                    ListType.LANGUAGE -> LanguageList().Languagies(item.list as List<LanguageModel>)
                 }
 
             }
