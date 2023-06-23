@@ -46,7 +46,7 @@ class ExperienceList {
             ) {
                 Row {
 
-                    Text(item.title, fontSize = 24.sp, fontWeight = FontWeight.ExtraBold ,modifier= Modifier.fillMaxWidth(0.8F))
+                    Text(item.title, fontSize = 24.sp, fontWeight = FontWeight.Bold ,modifier= Modifier.fillMaxWidth(0.8F))
                     Column(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalAlignment = Alignment.End
@@ -60,7 +60,6 @@ class ExperienceList {
                 Text(
                     item.content,
                     fontSize = 16.sp,
-                    fontWeight = FontWeight.Bold,
                     modifier = Modifier.padding(top = 4.dp)
                 )
                 if (!item.link.isNullOrEmpty()) {

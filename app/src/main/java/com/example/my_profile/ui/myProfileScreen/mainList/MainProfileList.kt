@@ -21,6 +21,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.my_profile.data.models.AboutMeModel
 import com.example.my_profile.data.models.ContactModel
 import com.example.my_profile.data.models.EducationModel
 import com.example.my_profile.data.models.ExperienceModel
@@ -28,6 +29,7 @@ import com.example.my_profile.data.models.LanguageModel
 import com.example.my_profile.data.models.ListType
 import com.example.my_profile.data.models.MainListModel
 import com.example.my_profile.data.models.SkillModel
+import com.example.my_profile.ui.myProfileScreen.aboutMeInfo.AboutMeInfo
 import com.example.my_profile.ui.myProfileScreen.contactList.Contacts
 import com.example.my_profile.ui.myProfileScreen.educationList.EducationList
 import com.example.my_profile.ui.myProfileScreen.experienceList.ExperienceList
@@ -72,7 +74,7 @@ class MainProfileList {
                     ListType.CONTACT -> Contacts().ContactList(item.list as List<ContactModel>)
                     ListType.QUALITY -> TODO()
                     ListType.SKILL -> SkillList().Skills(item.list as List<SkillModel>)
-                    ListType.ABOUT_ME -> TODO()
+                    ListType.ABOUT_ME -> AboutMeInfo().AboutMe(item.list as List<AboutMeModel>)
                     ListType.EDUCATION -> EducationList().Educations(item.list as List<EducationModel>)
                     ListType.EXPERIENCE -> ExperienceList().Experiences(item.list as List<ExperienceModel>)
                     ListType.LANGUAGE -> LanguageList().Languagies(item.list as List<LanguageModel>)
