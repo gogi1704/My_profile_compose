@@ -39,7 +39,7 @@ class Contacts {
     }
 
     @Composable
-    fun ContactItem(contact: ContactModel) {
+    private fun ContactItem(contact: ContactModel) {
 
         Surface(
             modifier = Modifier.fillMaxWidth()
@@ -47,7 +47,10 @@ class Contacts {
             shape = Shapes().small
         ) {
             Row {
-                Image(imageVector =ImageVector.vectorResource(contact.iconId), contentDescription = null)
+                Image(
+                    imageVector = ImageVector.vectorResource(contact.iconId),
+                    contentDescription = null
+                )
                 Spacer(modifier = Modifier.size(8.dp))
                 Text(contact.title, style = TextStyle(fontSize = 24.sp))
                 Column(
@@ -69,8 +72,6 @@ class Contacts {
         }
 
     }
-
-
 
 
 }

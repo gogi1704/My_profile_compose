@@ -1,4 +1,4 @@
-package com.example.my_profile.ui.myProfileScreen.skillList
+package com.example.my_profile.ui.myProfileScreen.qualityModel
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -15,29 +15,28 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.my_profile.R
-import com.example.my_profile.data.models.SkillModel
+import com.example.my_profile.data.models.QualityModel
 
-class SkillList {
+class QualityList {
 
     @OptIn(ExperimentalLayoutApi::class)
     @Composable
-    fun Skills(list: List<SkillModel>) {
+    fun Qualities(list: List<QualityModel>) {
 
-        FlowRow(maxItemsInEachRow = 2) {
+        FlowRow {
             for (item in list) {
-                SkillItem(item)
+                QualityItem(item)
             }
         }
-
 
     }
 
     @Composable
-    private fun SkillItem(item: SkillModel) {
+    private fun QualityItem(item: QualityModel) {
+
 
         Surface(
             modifier = Modifier.fillMaxWidth(0.5F).padding(end = 4.dp, bottom = 4.dp),
@@ -50,28 +49,14 @@ class SkillList {
                     modifier = Modifier.align(Alignment.CenterVertically)
                 )
                 Text(
-                    item.title,
+                    item.quality,
                     style = TextStyle(fontSize = 24.sp),
                     modifier = Modifier.padding(start = 8.dp)
                 )
             }
         }
 
-
     }
 
-    @Composable
-    @Preview
-    fun Prev() {
-        Skills(
-            listOf(
-                SkillModel("dwdwdwdwdw"),
-                SkillModel("dwdwdwdwdw"),
-                SkillModel("dwdwdwdwdw"),
-                SkillModel("dwdwdwdwdw"),
-                SkillModel("dwdwdwdwdw"),
-                SkillModel("dwdwdwdwdw")
-            )
-        )
-    }
+
 }

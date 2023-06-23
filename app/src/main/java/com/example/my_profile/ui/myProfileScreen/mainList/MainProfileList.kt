@@ -28,12 +28,14 @@ import com.example.my_profile.data.models.ExperienceModel
 import com.example.my_profile.data.models.LanguageModel
 import com.example.my_profile.data.models.ListType
 import com.example.my_profile.data.models.MainListModel
+import com.example.my_profile.data.models.QualityModel
 import com.example.my_profile.data.models.SkillModel
 import com.example.my_profile.ui.myProfileScreen.aboutMeInfo.AboutMeInfo
 import com.example.my_profile.ui.myProfileScreen.contactList.Contacts
 import com.example.my_profile.ui.myProfileScreen.educationList.EducationList
 import com.example.my_profile.ui.myProfileScreen.experienceList.ExperienceList
 import com.example.my_profile.ui.myProfileScreen.languageList.LanguageList
+import com.example.my_profile.ui.myProfileScreen.qualityModel.QualityList
 import com.example.my_profile.ui.myProfileScreen.skillList.SkillList
 
 class MainProfileList {
@@ -51,7 +53,7 @@ class MainProfileList {
 
 
     @Composable
-    fun MainListItem(item: MainListModel) {
+    private fun MainListItem(item: MainListModel) {
         val isClickedState = remember {
             mutableStateOf(false)
         }
@@ -72,7 +74,7 @@ class MainProfileList {
             if (isClickedState.value) {
                 when (item.type) {
                     ListType.CONTACT -> Contacts().ContactList(item.list as List<ContactModel>)
-                    ListType.QUALITY -> TODO()
+                    ListType.QUALITY -> QualityList().Qualities(item.list as List<QualityModel>)
                     ListType.SKILL -> SkillList().Skills(item.list as List<SkillModel>)
                     ListType.ABOUT_ME -> AboutMeInfo().AboutMe(item.list as List<AboutMeModel>)
                     ListType.EDUCATION -> EducationList().Educations(item.list as List<EducationModel>)
