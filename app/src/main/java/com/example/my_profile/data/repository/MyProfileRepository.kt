@@ -69,11 +69,11 @@ class MyProfileRepository {
     )
 
     private fun getEducations(): List<EducationModel> = listOf(
-        EducationModel("MГИМО", "Юр фак"),
-        EducationModel("MГИМО", "Юр фак"),
-        EducationModel("MГИМО", "Юр фак"),
-        EducationModel("MГИМО", "Юр фак"),
-        EducationModel("MГИМО", "Юр фак")
+        EducationModel("Донецкий тезникум (ДГТЭХТ)", "Юр фак" , "2012"),
+        EducationModel("MГИМО", "Юр фак", "2012"),
+        EducationModel("MГИМО", "Юр фак", "2012"),
+        EducationModel("MГИМО", "Юр фак", "2012"),
+        EducationModel("MГИМО", "Юр фак", "2012")
     )
 
     private fun getLanguages(): List<LanguageModel> = listOf(
