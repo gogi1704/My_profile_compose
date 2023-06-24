@@ -78,4 +78,7 @@ dependencies {
 
     implementation 'com.google.accompanist:accompanist-flowlayout:0.31.4-beta'
 
+    //Landscapist-glide
+    implementation "com.github.skydoves:landscapist-glide:2.2.1"
+
 }

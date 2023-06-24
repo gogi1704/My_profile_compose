@@ -6,6 +6,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Shapes
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -18,6 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.my_profile.R
+import com.skydoves.landscapist.glide.GlideImage
 
 class ProfileMainBlock {
 
@@ -27,17 +30,29 @@ class ProfileMainBlock {
 
 
         Surface(modifier = Modifier.fillMaxWidth()) {
-            Row {
-                Image(
-                    ImageVector.vectorResource(R.drawable.ic_launcher_foreground),
-                    contentDescription = "Profile photo",
-                    modifier = Modifier.padding(top = 8.dp, start = 8.dp)
-                )
+            Row(Modifier.padding(top = 8.dp, start = 8.dp)) {
+                Surface(shape = Shapes().large) {
+
+                    GlideImage(
+                        imageModel = { R.drawable.photo },
+                        modifier = Modifier.size(128.dp)
+                    )
+
+//                    Image(
+//                        ImageVector.vectorResource(R.drawable.photo),
+//                        contentDescription = "Profile photo",
+//                        modifier = Modifier.padding(top = 8.dp, start = 8.dp)
+//
+//                    )
+                }
 
                 Column(Modifier.padding(8.dp).fillMaxWidth()) {
-                    Text("Ларионов Георгий Юрьевич" , style = TextStyle(fontSize = 24.sp , fontWeight = FontWeight.Bold))
+                    Text(
+                        "Ларионов Георгий Юрьевич",
+                        style = TextStyle(fontSize = 24.sp, fontWeight = FontWeight.Bold)
+                    )
                     Spacer(Modifier.padding(4.dp))
-                    Text("Андроид разработчик" , style = TextStyle(fontSize = 12.sp))
+                    Text("Андроид разработчик", style = TextStyle(fontSize = 12.sp))
                     Spacer(Modifier.padding(4.dp))
                     Row(modifier = Modifier.padding(start = 8.dp)) {
                         Image(
