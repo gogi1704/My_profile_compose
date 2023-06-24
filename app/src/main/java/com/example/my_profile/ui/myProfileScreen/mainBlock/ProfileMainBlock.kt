@@ -37,13 +37,6 @@ class ProfileMainBlock {
                         imageModel = { R.drawable.photo },
                         modifier = Modifier.size(128.dp)
                     )
-
-//                    Image(
-//                        ImageVector.vectorResource(R.drawable.photo),
-//                        contentDescription = "Profile photo",
-//                        modifier = Modifier.padding(top = 8.dp, start = 8.dp)
-//
-//                    )
                 }
 
                 Column(Modifier.padding(8.dp).fillMaxWidth()) {
