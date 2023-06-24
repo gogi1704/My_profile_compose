@@ -35,7 +35,7 @@ import com.example.my_profile.ui.myProfileScreen.contactList.Contacts
 import com.example.my_profile.ui.myProfileScreen.educationList.EducationList
 import com.example.my_profile.ui.myProfileScreen.experienceList.ExperienceList
 import com.example.my_profile.ui.myProfileScreen.languageList.LanguageList
-import com.example.my_profile.ui.myProfileScreen.qualityModel.QualityList
+import com.example.my_profile.ui.myProfileScreen.qualityList.QualityList
 import com.example.my_profile.ui.myProfileScreen.skillList.SkillList
 
 class MainProfileList {

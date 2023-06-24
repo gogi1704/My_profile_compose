@@ -1,4 +1,4 @@
-package com.example.my_profile.ui.myProfileScreen.qualityModel
+package com.example.my_profile.ui.myProfileScreen.qualityList
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -50,7 +50,7 @@ class QualityList {
                 )
                 Text(
                     item.quality,
-                    style = TextStyle(fontSize = 24.sp),
+                    style = TextStyle(fontSize = 16.sp),
                     modifier = Modifier.padding(start = 8.dp)
                 )
             }
